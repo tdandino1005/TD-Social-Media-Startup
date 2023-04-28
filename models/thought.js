@@ -1,5 +1,5 @@
 // Create a Thought model using the thoughtSchema.
-const { Schema}, model, Types = require('mongoose');
+    const { Schema, model, Types} = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
 // Create a reaction schema
