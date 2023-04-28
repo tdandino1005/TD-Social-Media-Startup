@@ -1,13 +1,11 @@
-// connect to the router
+// connect to the database
 const router = require('express').Router();
-const apiRoutes = require('./api');
+const userRoutes = require('./userRoutes');
+const thoughtRoutes = require('./thoughtRoutes');
 
-// Add prefix of `/api` to all of the api routes imported from the `api` directory
-router.use('/api', apiRoutes);
+// connect to the routes
+router.use('/users', userRoutes);
+router.use('/thoughts', thoughtRoutes);
 
-// If no routes are hit, send the error message
-router.use((req, res) => {
-    res.status(404).send('<h1>404 Error!</h1>');
-});
-
+// export the router
 module.exports = router;
