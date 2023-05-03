@@ -1,13 +1,10 @@
-// create connection to mongodb
-// const mongoose = require('mongoose');
 const { connect, connection } = require('mongoose');
 
+const connectionString = 'mongodb://127.0.0.1:27017/socialmediaDB';
 
-mongoose.connect('mongodb://localhost/socialmediadb', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+connect(connectionString, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
-})
-
-// module.exports = mongoose.connection;
 module.exports = connection;

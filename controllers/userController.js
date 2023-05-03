@@ -1,13 +1,19 @@
 const {User, Thought} = require('../models');
 
-// get all users
+
 module.exports = {
-    getUser(req, res) {
-        User.find({})
-        .then((user) => res.json(user))
-        .catch((err) => res.status(500).json(err));
+    postUser(request, response) {
+      User.create(request.body)
+        .then((user) => response.json(user))
+        .catch((error) => response.status(500).json(error));
     },
-    
+    // get all users
+    getAllUsers(req, res) {
+        User.find()
+          .then((users) => response.json(users))
+          .catch((error) => response.status(500).json(error));
+      },
+
     // get single user by id
     getSingleUser(req, res) {
         User.findOne({ _id: req.params.userId })
