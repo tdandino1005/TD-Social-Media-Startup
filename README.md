@@ -16,7 +16,9 @@ SO THAT my website can handle large amounts of unstructured data
 
 ## Description:
 
+This app is an example of a social media website where users can add/post/react to thoughts.
 
+This API project uses MongoDB & Insomnia
 
 ## Installation:
 
